@@ -29,34 +29,28 @@ The preferred display name is:
 
 ## Why this repository exists
 
-People sometimes refer to the organization in inconsistent ways, such as:
+The name is written in one way only:
 
-- `OpenAPI`
-- `OpenApi`
-- `openAPI`
-- `OPENAPI`
+| | Form |
+|---|---|
+| ✅ | `Openapi` |
+| ❌ | `OpenAPI` |
+| ❌ | `OpenApi` |
+| ❌ | `openAPI` |
+| ❌ | `OPENAPI` |
 
-This guide explains which form to use in each context.
+This guide explains which form to use in each technical context.
 
 ## Naming conventions
 
 ### 1. Human-readable text
 
-Use:
-
-- **Openapi**
-
-Examples:
-
-- Openapi organization
-- Openapi SDK
-- Openapi PHP client
-
-Avoid:
-
-- OpenAPI
-- openAPI
-- OPENAPI
+| | Form | Example |
+|---|---|---|
+| ✅ | `Openapi` | Openapi organization, Openapi SDK |
+| ❌ | `OpenAPI` | |
+| ❌ | `openAPI` | |
+| ❌ | `OPENAPI` | |
 
 ### 2. GitHub organization and repository names
 
