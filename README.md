@@ -10,18 +10,14 @@ This repository defines the preferred naming conventions for **Openapi** across 
   - [1. Human-readable text](#1-human-readable-text)
   - [2. GitHub organization and repository names](#2-github-organization-and-repository-names)
   - [3. Environment variables](#3-environment-variables)
-  - [4. PHP classes](#4-php-classes)
-  - [5. PHP namespaces](#5-php-namespaces)
-  - [6. Variables and function names](#6-variables-and-function-names)
-    - [PHP](#php)
-    - [JavaScript / TypeScript](#javascript--typescript)
-    - [Python](#python)
-    - [Go](#go)
-    - [Rust](#rust)
-  - [7. Constants](#7-constants)
-  - [8. Package names](#8-package-names)
+  - [4. Package names](#4-package-names)
+  - [5. Constants](#5-constants)
+  - [6. PHP](#6-php)
+  - [7. JavaScript / TypeScript](#7-javascript--typescript)
+  - [8. Python](#8-python)
+  - [9. Go](#9-go)
+  - [10. Rust](#10-rust)
 - [Quick reference](#quick-reference)
-- [PHP examples](#php-examples)
 - [Forms to avoid](#forms-to-avoid)
 - [Rule of thumb](#rule-of-thumb)
 
@@ -93,64 +89,120 @@ Standard variables used across Openapi projects:
 | `OPENAPI_TOKEN` | Bearer token for production |
 | `OPENAPI_SANDBOX_TOKEN` | Bearer token for sandbox |
 
-### 4. PHP classes
-
-Use PascalCase for class names:
-
-- `OpenapiClient`
-- `OpenapiConfig`
-- `OpenapiException`
-
-### 5. PHP namespaces
-
-Use PascalCase segments:
-
-- `Openapi\Client`
-- `Openapi\Support`
-
-### 6. Variables and function names
-
-Use the naming style required by the language.
-
-#### PHP
-- `$openapiClient`
-- `$openapiConfig`
-- `createOpenapiClient()`
-
-#### JavaScript / TypeScript
-- `openapiClient`
-- `openapiConfig`
-- `createOpenapiClient()`
-
-#### Python
-- `openapi_client`
-- `openapi_config`
-- `create_openapi_client()`
-
-#### Go
-- `openapiClient`
-- `openapiConfig`
-- `NewOpenapiClient()`
-
-#### Rust
-- `openapi_client`
-- `openapi_config`
-- `create_openapi_client()`
-
-### 7. Constants
-
-Use uppercase snake case:
-
-- `OPENAPI_DEFAULT_TIMEOUT`
-- `OPENAPI_API_VERSION`
-
-### 8. Package names
+### 4. Package names
 
 Use lowercase where ecosystem conventions require it:
 
 - `openapi-client`
 - `openapi-sdk`
 - `openapi-php`
+
+### 5. Constants
+
+Use uppercase snake case:
+
+- `OPENAPI_DEFAULT_TIMEOUT`
+- `OPENAPI_API_VERSION`
+
+### 6. PHP
+
+**Classes:** PascalCase prefixed with `Openapi`
+
+- `OpenapiClient`
+- `OpenapiConfig`
+- `OpenapiException`
+- `OpenapiServiceProvider`
+
+**Namespaces:** PascalCase segments
+
+- `Openapi\Client`
+- `Openapi\Support`
+- `Openapi\Http\RequestBuilder`
+
+**Variables:** camelCase
+
+- `$openapiClient`
+- `$openapiConfig`
+- `$openapiApiKey`
+
+**Functions:** camelCase
+
+- `createOpenapiClient()`
+
+Avoid: `OpenAPIClient`, `OpenApiClient`, `$OpenapiClient`, `$openAPIClient`
+
+### 7. JavaScript / TypeScript
+
+**Classes:** PascalCase prefixed with `Openapi`
+
+- `OpenapiClient`
+- `OpenapiConfig`
+
+**Variables:** camelCase
+
+- `openapiClient`
+- `openapiConfig`
+
+**Functions:** camelCase
+
+- `createOpenapiClient()`
+
+### 8. Python
+
+**Classes:** PascalCase prefixed with `Openapi`
+
+- `OpenapiClient`
+- `OpenapiConfig`
+
+**Modules:** snake_case
+
+- `openapi_client`
+- `openapi_config`
+
+**Variables and functions:** snake_case
+
+- `openapi_client`
+- `openapi_config`
+- `create_openapi_client()`
+
+### 9. Go
+
+**Types and exported identifiers:** PascalCase prefixed with `Openapi`
+
+- `OpenapiClient`
+- `OpenapiConfig`
+
+**Packages:** lowercase
+
+- `openapi`
+
+**Variables:** camelCase
+
+- `openapiClient`
+- `openapiConfig`
+
+**Functions:** PascalCase if exported, camelCase if unexported
+
+- `NewOpenapiClient()`
+- `newOpenapiClient()`
+
+### 10. Rust
+
+**Structs and enums:** PascalCase prefixed with `Openapi`
+
+- `OpenapiClient`
+- `OpenapiConfig`
+
+**Modules and crates:** snake_case
+
+- `openapi_client`
+- `openapi_config`
+
+**Variables and functions:** snake_case
+
+- `openapi_client`
+- `openapi_config`
+- `create_openapi_client()`
 
 ## Quick reference
 
@@ -159,27 +211,11 @@ Use lowercase where ecosystem conventions require it:
 | Brand / display name | `Openapi` | Openapi SDK |
 | GitHub org / repo | `openapi` | `openapi/openapi-naming` |
 | Environment variables | `OPENAPI_*` | `OPENAPI_API_KEY` |
-| PHP classes | `Openapi*` | `OpenapiClient` |
-| PHP namespaces | `Openapi` | `Openapi\Client` |
-| Local variables | language convention | `$openapiClient` |
 | Constants | `OPENAPI_*` | `OPENAPI_DEFAULT_TIMEOUT` |
-
-## PHP examples
-
-Preferred:
-
-- `OpenapiClient`
-- `OpenapiServiceProvider`
-- `Openapi\Http\RequestBuilder`
-- `$openapiClient`
-- `$openapiApiKey`
-
-Avoid:
-
-- `OpenAPIClient`
-- `OpenApiClient`
-- `$OpenapiClient`
-- `$openAPIClient`
+| PHP / JS / Go classes | `Openapi*` | `OpenapiClient` |
+| PHP / Go variables | `$openapiClient` | camelCase |
+| Python / Rust variables | `openapi_client` | snake_case |
+| Package names | `openapi-*` | `openapi-sdk` |
 
 ## Forms to avoid
 
