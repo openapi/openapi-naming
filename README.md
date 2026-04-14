@@ -13,21 +13,11 @@ The preferred display name is:
 People sometimes refer to the organization in inconsistent ways, such as:
 
 - `OpenAPI`
+- `OpenApi`
 - `openAPI`
 - `OPENAPI`
 
 This guide explains which form to use in each context.
-
-## Important distinction
-
-**Openapi** refers to this organization or brand.
-
-**OpenAPI** may still be used when referring to the industry specification named OpenAPI.
-
-Examples:
-
-- Correct: "Openapi maintains this repository."
-- Correct: "This tool supports the OpenAPI specification."
 
 ## Naming conventions
 
@@ -62,6 +52,23 @@ Use uppercase snake case:
 
 - `OPENAPI_API_KEY`
 - `OPENAPI_BASE_URL`
+
+Standard variables used across Openapi projects:
+
+**OAuth credentials (token management):**
+
+| Variable | Description |
+|---|---|
+| `OPENAPI_USERNAME` | Account username (email) |
+| `OPENAPI_KEY` | API key |
+| `OPENAPI_SANDBOX_KEY` | Sandbox API key |
+
+**Bearer tokens (service API commands):**
+
+| Variable | Description |
+|---|---|
+| `OPENAPI_TOKEN` | Bearer token for production |
+| `OPENAPI_SANDBOX_TOKEN` | Bearer token for sandbox |
 
 ### 4. PHP classes
 
