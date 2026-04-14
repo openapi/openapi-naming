@@ -2,6 +2,29 @@
 
 This repository defines the preferred naming conventions for **Openapi** across documentation, source code, environment variables, package names, and integrations.
 
+## Table of contents
+
+- [Official name](#official-name)
+- [Why this repository exists](#why-this-repository-exists)
+- [Naming conventions](#naming-conventions)
+  - [1. Human-readable text](#1-human-readable-text)
+  - [2. GitHub organization and repository names](#2-github-organization-and-repository-names)
+  - [3. Environment variables](#3-environment-variables)
+  - [4. PHP classes](#4-php-classes)
+  - [5. PHP namespaces](#5-php-namespaces)
+  - [6. Variables and function names](#6-variables-and-function-names)
+    - [PHP](#php)
+    - [JavaScript / TypeScript](#javascript--typescript)
+    - [Python](#python)
+    - [Go](#go)
+    - [Rust](#rust)
+  - [7. Constants](#7-constants)
+  - [8. Package names](#8-package-names)
+- [Quick reference](#quick-reference)
+- [PHP examples](#php-examples)
+- [Forms to avoid](#forms-to-avoid)
+- [Rule of thumb](#rule-of-thumb)
+
 ## Official name
 
 The preferred display name is:
