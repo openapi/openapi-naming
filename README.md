@@ -104,6 +104,16 @@ Use the naming style required by the language.
 - `openapi_config`
 - `create_openapi_client()`
 
+#### Go
+- `openapiClient`
+- `openapiConfig`
+- `NewOpenapiClient()`
+
+#### Rust
+- `openapi_client`
+- `openapi_config`
+- `create_openapi_client()`
+
 ### 7. Constants
 
 Use uppercase snake case:
