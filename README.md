@@ -217,7 +217,7 @@ Unless a platform or technical convention requires otherwise, avoid:
 
 - `OpenAPI`
 - `openAPI`
-- `OPENAPI`
+- `openApi`
 
 ## Rule of thumb
 
